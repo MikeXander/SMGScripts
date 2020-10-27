@@ -278,6 +278,17 @@ function core.Rotation() -- 0x18E8 ?
     return readTriple(RefPointer(), 0x18DC + 0xC, ReadValueFloat, {"AngleA", "AngleB", "AngleC"})
 end
 
+function core.NunchukEncryptionKey() -- Found by BillyWAR
+    local addr = 0x661AC4
+    local array = {}
+    local str = ""
+    for i = 1, 16 do
+        array[i] = ReadValue8(addr + (i - 1))
+        str = str .. string.format("%02X ", array[i])
+    end
+    return {array, str}
+end
+
 --[[
 function core.angle()
     return ReadValue32(RefPointer() + 0x3FC4‬)

@@ -262,6 +262,8 @@ function onScriptUpdate()
 	--text = text .. displayValueOrdered("States", core.States(), {"A", "B", "C", "D"}, nil, 32)
 	text = text .. "\nGrounded: " .. core.StateATable()[2]
 
+	text = text .. "\n\nNunchuk Key: " .. core.NunchukEncryptionKey()[2]
+
 	-- HUD test
 	--text = text .. string.format("\nRef: %08X\nPos: %08X\n", core.rp(), core.pr())
 	--text = text .. string.format("\nHP: %d\nStarbits: %d\nCoins: %d\n", core.HP(), core.Starbits(), core.Coins())
