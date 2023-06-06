@@ -26,12 +26,11 @@ If there is too much text on your screen, you don't need to know how to program 
 
 
 ### To Do:
-- Separate `SMG.lua` into a bunch of smaller scripts
 - Upgrade `SMG2.lua` to have as much detail as `SMG.lua`
 - Make format consistent
 
 
 ### See Also:
 - My [Wiimote Input Visualizer](https://github.com/MikeXander/WiimoteInputVisualizer)
-- Yoshifan's [Cheat Engine RAM Watch](https://github.com/yoshifan/ram-watch-cheat-engine)
+- Joselle's [Cheat Engine RAM Watch](https://github.com/JoselleAstrid/ram-watch-cheat-engine)
 - SMG TASing [Discord Server](https://discord.gg/h2YSCZm)

@@ -1,4 +1,4 @@
-local core = require "SMG_core"
+local Memory = require "Memory"
 local lastFrame = 0
 local lastText = 0
 local secondLastText = 0
@@ -20,7 +20,7 @@ function onScriptUpdate()
 	if GetFrameCount() == lastFrame then return end
 	lastFrame = GetFrameCount()
 
-	local currentText = core.TextProgress().textProgress
+	local currentText = Memory.Misc.TextInfo.TextProgress
 	local spd = currentText - lastText -- text/frame
 
 	-- if the text goes from zero to non-zero, reset the average speed
@@ -44,7 +44,7 @@ function onScriptUpdate()
 	end
 
 	local text = "\n\n\n\n\n\n\n\n\n" -- enough to put it below standard textboxes
-	text = text .. string.format("Text Progress: %4d\n", core.TextProgress().textProgress)
+	text = text .. string.format("Text Progress: %4d\n", Memory.Misc.TextInfo.TextProgress)
 	text = text .. string.format("Text Speed: %7d\n", spd)
 
 	-- because it only stops when the text doesnt progress twice in a row,
